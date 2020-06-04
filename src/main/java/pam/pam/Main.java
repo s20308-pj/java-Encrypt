@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Podaj rodzaj szyfrowania:\n1. atBash\n2. cesar");
+        System.out.println("Podaj rodzaj dzialania:\n1. szyfrowanie atBasha\n2. szyfrowanie cezara\n3. rozszwfrowywanie cezara");
         int chose = stringToInt(take());
         switch (chose) {
             case 1:
@@ -18,6 +18,12 @@ public class Main {
                 int redeploy = stringToInt(take());
                 System.out.println(CesarEncrypt.encrypt(sentence, redeploy));
                 break;
+            case 3:
+                System.out.println("Podaj zdanie: ");
+                sentence = take().toLowerCase();
+                System.out.println("Podaj przesuniecie: ");
+                redeploy = stringToInt(take());
+                System.out.println(CesarEncrypt.decrypt(sentence, redeploy));
         }
     }
 

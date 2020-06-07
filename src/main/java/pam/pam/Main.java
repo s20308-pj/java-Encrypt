@@ -3,7 +3,7 @@ package pam.pam;
 public class Main {
 
     public static void main(String[] args) {
-        String chose = "decrypt";
+        String chose = "encrypt";
         String metod = "unicode";
         String sentence = "";
         int key = 0;
@@ -38,7 +38,7 @@ public class Main {
             }
         }
         System.out.println(chose + " " + key + " " + sentence);
-        if (whetherToSave == "load") {
+        if (whetherToSave == "load" && patchToFile != null) {
             sentence = ReadWrite.toRead(patchToFile);
         }
         switch (metod) {
@@ -76,7 +76,7 @@ public class Main {
                 System.out.println("Bad algorithm parameters\n use shift, unicode or atbash");
                 System.exit(1);
         }
-        if (whetherToSave == "save") {
+        if (whetherToSave == "save" && patchToFile != null) {
             ReadWrite.toWrite(modifiedText, patchToFile);
         } else {
             System.out.println(modifiedText);

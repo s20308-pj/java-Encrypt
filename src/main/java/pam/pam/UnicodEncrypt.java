@@ -1,6 +1,6 @@
 package pam.pam;
 
-public class UnicodEncrypt {
+public class UnicodEncrypt implements ReferEncryption{
     public static String encrypt(String toEncrypt, int key) {
         char[] word = toEncrypt.toCharArray();
         for (int i = 0; i < word.length; i++) {

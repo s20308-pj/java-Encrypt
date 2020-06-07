@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class ReadWrite {
+public class ReadWrite{
     public static void toWrite(String sentence, String patchToFile) {
         FileWriter fileWriter = null;
         try {
